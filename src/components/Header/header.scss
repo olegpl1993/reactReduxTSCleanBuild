@@ -1,0 +1,43 @@
+.header {
+  .logoRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .logoBox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      .logo {
+        font-size: 50px;
+        color: white;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+    }
+
+    .navigation {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      .link {
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
