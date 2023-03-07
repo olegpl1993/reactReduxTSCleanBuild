@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../hook';
 import { changeLanguage } from '../../store/languageSlice';
 import './header.scss';
+import img from '../../img/img';
 
 export default function Header() {
   const dispatch = useAppDispatch();
@@ -16,6 +17,7 @@ export default function Header() {
     <div className="header">
       <div className="logoRow">
         <div className="logoBox">
+          <img src={img.coffee} alt="coffee" height={100} />
           <NavLink className="logo" to="/">
             SiteLogo
           </NavLink>
