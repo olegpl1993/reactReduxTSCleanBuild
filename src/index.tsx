@@ -5,10 +5,10 @@ import { Provider } from 'react-redux';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import store from './store/store';
 import Header from './components/Header/header';
-import Main from './Pages/Main/main';
-import Second from './Pages/Second/second';
-import Next from './Pages/Next/next';
-import PageNotFound from './Pages/PageNotFound/pageNotFound';
+import Main from './pages/Main/main';
+import Second from './pages/Second/second';
+import Next from './pages/Next/next';
+import PageNotFound from './pages/PageNotFound/pageNotFound';
 import Footer from './components/Footer/footer';
 
 const root = ReactDOM.createRoot(
