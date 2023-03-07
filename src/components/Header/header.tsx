@@ -12,7 +12,6 @@ export default function Header() {
   const changeLanguageState = (str: string) => {
     dispatch(changeLanguage(str));
   };
-  console.log(lang);
   return (
     <div className="header">
       <div className="logoRow">

@@ -1,20 +1,40 @@
 import React, { useEffect, useState } from 'react';
+import Week from '../../components/Week/week';
 import { useAppSelector } from '../../hook';
 import './main.scss';
 
 // --------------------------------------------------------------
 interface TextKey {
-  textText: string;
+  weekDayNames: string[];
+  week: string;
 }
 interface Text {
   [key: string]: TextKey;
 }
 const text: Text = {
   ru: {
-    textText: 'Русский текст',
+    weekDayNames: [
+      'Понедельник',
+      'Вторник',
+      'Среда',
+      'Четверг',
+      'Пятница',
+      'Суббота',
+      'Воскресенье',
+    ],
+    week: 'Неделя',
   },
   en: {
-    textText: 'English text',
+    weekDayNames: [
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+      'Sunday',
+    ],
+    week: 'Week',
   },
 };
 // ------------------------------------------------------------------
@@ -33,7 +53,10 @@ function Main() {
         {mainState}
       </div>
       <div className="text">
-        {text[lang].textText}
+        {text[lang].week}
+      </div>
+      <div className="weekContainer">
+        <Week weekDayNames={text[lang].weekDayNames} />
       </div>
     </div>
   );
